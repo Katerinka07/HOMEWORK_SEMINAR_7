@@ -30,7 +30,7 @@ void Print2DArray(int[,] array)
     {
         for (int j = 0; j < array.GetLength(1); j++)
             Console.Write($"{array[i, j]}\t");
-            Console.WriteLine();
+        Console.WriteLine();
     }
 }
 void ArithmeticMean(int[,] array)
@@ -47,7 +47,7 @@ void ArithmeticMean(int[,] array)
         if (j < array.GetLength(1) - 1)
             Console.Write("; ");
         else
-            Console.Write(".");
+            Console.WriteLine(".");
     }
 }
 int rows = InputNum("Введите количество строк: ");
@@ -59,4 +59,3 @@ int[,] myArray = Create2DArray(rows, columns);
 Fill2DArray(myArray, minValue, maxValue);
 Print2DArray(myArray);
 ArithmeticMean(myArray);
-Console.WriteLine();
